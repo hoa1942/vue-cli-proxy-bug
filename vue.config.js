@@ -3,6 +3,12 @@ const fs = require('fs')
 
 module.exports = {
 	devServer : {
+		https : true,
+//		pfx : fs.readFileSync(process.env.proxyServerCert),
+//		pfxPassphrase : process.env.proxyServerCertPassword,
+//		ca : fs.readFileSync(process.env.proxyServerCA),
+//		requestCert : false,		
+		
 		proxy : {
 			'/test' : {
 				target : {
